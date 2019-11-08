@@ -24,7 +24,7 @@ alias gbc="git branch -vv | grep '*'"
 alias gcob="git checkout -b"
 
 # Grep the codebase
-alias gg="git grep"
+alias gg="git grep -n "
 
 # list aliases
 alias gla="!git config -l | grep alias | cut -c 7-"
