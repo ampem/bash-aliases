@@ -17,6 +17,8 @@ alias gs="git status -s"
 alias gco="git checkout"
 # List branches
 alias gb="git branch -vv"
+# Use fzf to select branches
+alias gbf="git branch -vv --color=always | fzf --ansi"
 # Search the list of branches
 alias gbs="git branch -vv | grep "
 # List the current branch
