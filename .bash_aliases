@@ -30,3 +30,8 @@ alias gg="git grep -n "
 
 # list aliases
 alias gla="!git config -l | grep alias | cut -c 7-"
+
+# Open files where search is found
+function ggs {
+	git grep -n $1 | awk '{print $1}' | sed 's/:$//g' | xargs subl -a
+}
