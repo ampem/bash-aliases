@@ -35,3 +35,8 @@ alias gla="!git config -l | grep alias | cut -c 7-"
 function ggs {
 	git grep -n $1 | awk '{print $1}' | sed 's/:$//g' | xargs subl -a
 }
+
+# Open files where search is found
+function ggc {
+	git grep -n $1 | awk '{print $1}' | sed 's/:$//g' | xargs code -g
+}
